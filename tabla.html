@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multiplicar
+    </title>
+</head>
+<body>
+    <h1>tabla de multiplicar</h1>
+    <p>dime que tabla quieres ver</p>
+    <p>digita un numero</p>
+    <input type="number" id="numeroM">
+    <button onclick="multiplicar()">oprime el boton
+    </button>
+
+
+   <ul id="verTabla">
+
+   </ul>
+
+    <script>
+        function multiplicar() {
+            let elementoNumero = +document.getElementById("numeroM").value;
+            let elementoTabla = document.getElementById("verTabla");
+            
+            for (let i = 1; i <=10; i++) {
+                let mult = elementoNumero * i;//2 * 1---2 * 2.... 2 *10 =20
+                let tabla = document.createElement("li");
+                tabla.innerHTML = elementoNumero + " * " + i + " = " + mult;; // 2 * 1 = 2--- 2* 2 = 4
+                elementoTabla.appendChild(tabla);
+                
+            }
+            
+        }
+        
+
+    </script>
+</body>
+</html>
